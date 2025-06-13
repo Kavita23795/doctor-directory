@@ -1,0 +1,34 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql" // Change to "mysql" or "sqlite" based on your database
+  url      = env("DATABASE_URL")
+}
+
+model Doctor {
+ id       Int @id @default(autoincrement())  // ✅ Primary key
+doctorid Int?                               // ✅ allow duplicates
+
+  title          String
+  firstname      String
+  lastname       String
+  oncology       String?
+  specialization String?
+  doctor_city    String?
+  hospitalid     Int
+  hospital_name  String
+  addressfield1  String?
+  addressfield2  String?
+  hospital_city  String?
+  state          String?
+  pincode        Int?
+  area           String?
+  websitelink    String?
+
+  @@map("doctor")
+}
