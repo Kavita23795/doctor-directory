@@ -33,9 +33,10 @@ cd doctor-directory
 ```bash
 npm install 
 ```
-### 3. Change Database name and password
+### 3. Change Database name and password in .env file
 ```bash
-cp .env.example .env
+DATABASE_URL="postgresql://postgres:password@localhost:5432/database_name?schema=public"
+NEXTAUTH_URL="http://localhost:3000"
 ```
 ### 4. Set up the database
 ```bash
