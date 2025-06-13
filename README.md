@@ -32,7 +32,7 @@ cd doctor-directory
 ### 2. Install dependencies
 ```bash
 npm install 
-
+```
 ### 3. Change Database name and password
 ```bash
 cp .env.example .env
